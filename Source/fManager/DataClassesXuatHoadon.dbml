@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ORDERMILKTEA" Class="DataClassesXuatHoadonDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HOAHOA\SQLEXPRESS;Initial Catalog=ORDERMILKTEA;Integrated Security=True" SettingsObjectName="fManager.Properties.Settings" SettingsPropertyName="ORDERMILKTEAConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.USP_GetListBillByDate" Method="USP_GetListBillByDate">
+    <Parameter Name="checkIn" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="checkOut" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="USP_GetListBillByDateResult">
+      <Column Name="[Tên bàn]" Member="Tên_bàn" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tổng tiền]" Member="Tổng_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Ngày vào]" Member="Ngày_vào" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[Ngày ra]" Member="Ngày_ra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[Giảm giá]" Member="Giảm_giá" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
